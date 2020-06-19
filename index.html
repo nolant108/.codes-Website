@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ascension</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <div class="container">
+        <h1>Ascension</h1>
+        <h2>Launching soon.</h2>
+        
+        
+        <div class="count">
+        <div class="countd">
+        <span id="days">00</span>
+            DAYS
+        </div>
+        
+        <div class="countd">
+        <span id="hours">00</span>
+            HOURS
+        </div>
+        
+        <div class="countd">
+        <span id="minutes">00</span>
+            MINUTES
+        </div>
+        
+        <div class="countd">
+        <span id="seconds">00</span>
+            SECONDS
+        </div>
+        </div>
+        </div>
+        <div class="media">
+            <ul>
+                <a href="https://twitter.com/Ascensionxyz" target="_blank">
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                </a>
+            </ul>
+        </div>
+        
+        <script type="text/javascript">
+            
+            var count = new Date("aug 18,2020 00:00:00").getTime();
+            
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var d = count - now;
+                
+                var days = Math.floor(d/(1000*60*60*24));
+                var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+                var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+                var seconds = Math.floor((d%(1000*60))/1000);
+                  
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+                   
+            },1000);      
+        </script> 
+    </body>
+</html>
